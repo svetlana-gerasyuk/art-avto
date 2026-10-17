@@ -5,10 +5,10 @@
 <meta name="robots" content="noindex, nofollow" data-publish>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Арт Авто · Оклейка, тонировка, детейлинг</title>
-<meta name="description" content="Артём Карел, отзыв на Яндекс.Картах, 31 августа. Выберите услугу и время, заявка уйдёт в ВК студии.">
+<meta name="description" content="Тонировка стёкол, защитная плёнка, полировка кузова, химчистка салона и удаление вмятин без покраски">
 <meta property="og:type" content="website">
-<meta property="og:title" content="«Спектр услуг огромный: от тонировки, мойки и полировки до устранения дефектов, бронирования кузова и даже наружной рекламы на авто»">
-<meta property="og:description" content="Артём Карел, отзыв на Яндекс.Картах, 31 августа. Выберите услугу и время, заявка уйдёт в ВК студии.">
+<meta property="og:title" content="Детейлинг и уход за автомобилем в Петрозаводске">
+<meta property="og:description" content="Тонировка стёкол, защитная плёнка, полировка кузова, химчистка салона и удаление вмятин без покраски">
 <meta property="og:image" content="assets/hero.webp">
 <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%276%27 y=%276%27 width=%2720%27 height=%2720%27 rx=%275%27 fill=%27%23cfdae6%27/%3E%3C/svg%3E">
@@ -16,10 +16,32 @@
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-cyrillic.woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
-:root { --c-canvas: #0a0e14; --c-surface: #131a24; --c-ink: #eef2f6; --c-ink-soft: #95a3b3; --c-accent: #cfdae6; --c-accent-ink: #0a0e14; --c-accent-deep: #cfdae6; --f-display: "Unbounded", "Arial Black", system-ui, sans-serif; --f-text: "Manrope", "Segoe UI", system-ui, sans-serif; --h1k: 0.6; }
+:root { --c-canvas: #0a0e14; --c-surface: #131a24; --c-ink: #eef2f6; --c-ink-soft: #95a3b3; --c-accent: #cfdae6; --c-accent-ink: #0a0e14; --c-accent-deep: #cfdae6; --f-display: "Unbounded", "Arial Black", system-ui, sans-serif; --f-text: "Manrope", "Segoe UI", system-ui, sans-serif; --h1k: 0.74; }
 </style>
 <link rel="stylesheet" href="style-prod.css">
-<style>/*no-hyphens*/h1,h2,h3,.s-hero h1,.s-steps h3{hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal}</style>
+<style>/*patch-site*/
+h1,h2,h3,.s-hero h1,.s-steps h3{hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal}
+.s-hero .s-eyebrow{margin-bottom:14px}
+.s-hero h1{line-height:1.12;letter-spacing:-.012em;max-width:15em;text-wrap:balance}
+.s-hero .s-lead{margin-top:16px;font-size:1.06rem;line-height:1.55;max-width:33em}
+.s-pick{margin:14px 0 0;font-weight:600;font-size:1.02rem;line-height:1.4;color:var(--c-ink)}
+.s-hero .s-ticks{margin-top:22px;gap:10px}
+.s-hero .s-rating{margin-top:20px}
+.s-chip--row{justify-content:flex-start;gap:12px}
+.s-chip--row b:empty{display:none}
+.s-chip--row::before{content:"";flex:none;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--c-ink-soft);box-sizing:border-box;transition:background .15s,border-color .15s}
+.s-chip--row:has(input:checked){background:var(--c-accent);border-color:var(--c-accent);color:var(--c-accent-ink)}
+.s-chip--row:has(input:checked)::before{background:var(--c-accent-ink);border-color:var(--c-accent-ink)}
+.s-chip--row:has(input:checked)::after{content:"";position:absolute;left:21px;top:50%;width:5px;height:10px;border:solid var(--c-accent);border-width:0 2px 2px 0;transform:translateY(-64%) rotate(45deg)}
+.s-time-note{margin:8px 0 0;font-size:.82rem;line-height:1.4;color:var(--c-ink-soft)}
+.s-sum{display:grid;gap:6px;padding:12px 14px;border:1px solid var(--hair);border-radius:12px;font-size:.92rem;line-height:1.4}
+.s-sum p{margin:0}
+.s-sum b{display:block;margin-bottom:1px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-ink-soft)}
+.s-hint{margin:0;font-size:.86rem;color:var(--c-accent)}
+.s-hint.is-nudge{animation:s-nudge .5s}
+@keyframes s-nudge{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.s-send .s-btn[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
+</style>
 </head>
 <body class="s-prod" id="top" data-wa="" data-vk="https://vk.ru/art.avto_ptz" data-tg="" data-max="">
 <header class="s-bar" data-s-bar>
@@ -33,20 +55,28 @@
   <section class="s-hero">
     <div class="s-hero__text">
       <p class="s-eyebrow">Оклейка, тонировка, детейлинг · Петрозаводск</p>
-      <h1>«Спектр услуг огромный: от тонировки, мойки и полировки до устранения дефектов, бронирования кузова и даже наружной рекламы на авто»</h1>
-      <p class="s-lead">Артём Карел, отзыв на Яндекс.Картах, 31 августа. Выберите услугу и время, заявка уйдёт в ВК студии.</p>
-      <ul class="s-ticks"><li>Предварительная запись</li><li>Оплата картой</li><li>Оклейка, тонировка, полировка, химчистка, вмятины без покраски</li></ul>
+      <h1>Детейлинг и уход за автомобилем в Петрозаводске</h1>
+      <p class="s-lead">Тонировка стёкол, защитная плёнка, полировка кузова, химчистка салона и удаление вмятин без покраски</p>
+      <p class="s-pick">Выберите услугу и удобное время для записи</p>
+      <ul class="s-ticks"><li>Предварительная запись</li><li>Оплата картой</li></ul>
       <p class="s-rating"><b>4,9</b> на Яндекс.Картах · 85 отзывов</p>
       <figure class="s-hero__photo"><img class="" src="assets/hero.webp" alt="Фасад студии Арт Авто: вывеска и надпись «Защитные плёнки · Детейлинг»" loading="lazy" decoding="async"></figure>
     </div>
-    <div class="s-hero__widget" id="widget"><form class="s-widget" data-s-booking data-days="7" data-closed="" data-slots="10:00,11:00,12:00,13:00,14:00,15:00,16:00" data-message="Здравствуйте! Хочу записаться в Арт Авто: {услуга}, {день} в {время}." onsubmit="return false">
+    <div class="s-hero__widget" id="widget"><form class="s-widget" data-s-booking data-days="7" data-closed="" data-slots="10:00,11:00,12:00,13:00,14:00,15:00,16:00" data-message="Здравствуйте! Хочу записаться в Арт Авто. Услуги: {услуга}. Желаемое время: {день} в {время}." onsubmit="return false">
       <h2 class="s-widget__title">Онлайн-запись</h2>
-      <fieldset><legend>Услуга</legend>
-        <div class="s-chips s-chips--col"><label class="s-chip s-chip--row"><input type="radio" name="svc" value="0" data-name="Тонировка стёкол" data-price="" data-from="" data-min="" checked><span>Тонировка стёкол</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="1" data-name="Бронирование кузова плёнкой" data-price="" data-from="" data-min=""><span>Бронирование кузова плёнкой</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="2" data-name="Полировка кузова" data-price="" data-from="" data-min=""><span>Полировка кузова</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="3" data-name="Удаление вмятин без покраски" data-price="" data-from="" data-min=""><span>Удаление вмятин без покраски</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="4" data-name="Химчистка салона" data-price="" data-from="" data-min=""><span>Химчистка салона</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="5" data-name="Мойка" data-price="" data-from="" data-min=""><span>Мойка</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="6" data-name="Устранение скола на лобовом стекле" data-price="" data-from="" data-min=""><span>Устранение скола на лобовом стекле</span><b></b></label></div>
+      <fieldset><legend>Услуги: можно выбрать несколько</legend>
+        <div class="s-chips s-chips--col"><label class="s-chip s-chip--row"><input type="checkbox" name="svc" value="0" data-name="Тонировка стёкол" data-price="" data-from="" data-min=""><span>Тонировка стёкол</span><b></b></label><label class="s-chip s-chip--row"><input type="checkbox" name="svc" value="1" data-name="Бронирование кузова плёнкой" data-price="" data-from="" data-min=""><span>Бронирование кузова плёнкой</span><b></b></label><label class="s-chip s-chip--row"><input type="checkbox" name="svc" value="2" data-name="Полировка кузова" data-price="" data-from="" data-min=""><span>Полировка кузова</span><b></b></label><label class="s-chip s-chip--row"><input type="checkbox" name="svc" value="3" data-name="Удаление вмятин без покраски" data-price="" data-from="" data-min=""><span>Удаление вмятин без покраски</span><b></b></label><label class="s-chip s-chip--row"><input type="checkbox" name="svc" value="4" data-name="Химчистка салона" data-price="" data-from="" data-min=""><span>Химчистка салона</span><b></b></label><label class="s-chip s-chip--row"><input type="checkbox" name="svc" value="5" data-name="Мойка" data-price="" data-from="" data-min=""><span>Мойка</span><b></b></label><label class="s-chip s-chip--row"><input type="checkbox" name="svc" value="6" data-name="Устранение скола на лобовом стекле" data-price="" data-from="" data-min=""><span>Устранение скола на лобовом стекле</span><b></b></label></div>
       </fieldset>
       <fieldset><legend>День</legend><div class="s-chips" data-s-days></div></fieldset>
-      <fieldset><legend>Время</legend><div class="s-chips" data-s-times></div></fieldset>
-      <div class="s-bubble" aria-live="polite"><span class="s-bubble__label">Ваше сообщение</span><p data-s-bubble></p></div>
+      <fieldset><legend>Желаемое время</legend><div class="s-chips" data-s-times></div>
+        <p class="s-time-note">Это желаемое время, а не бронь: точное время подтвердит студия.</p></fieldset>
+      <div class="s-sum" aria-live="polite" data-s-sum>
+        <p><b>Услуги:</b><span data-sum-svc>не выбраны</span></p>
+        <p><b>День:</b><span data-sum-day>не выбран</span></p>
+        <p><b>Желаемое время:</b><span data-sum-time>не выбрано</span></p>
+      </div>
+      <div class="s-bubble" aria-live="polite"><span class="s-bubble__label">Текст заявки</span><p data-s-bubble></p></div>
+      <p class="s-hint" data-s-hint>Выберите хотя бы одну услугу, чтобы отправить заявку.</p>
       <div class="s-send">
         <a class="s-btn s-btn--wide" data-s-msg="vk" href="#">Записаться в ВКонтакте</a>
         

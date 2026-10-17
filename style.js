@@ -36,6 +36,7 @@
   document.addEventListener("click", async (e) => {
     const a = e.target.closest("[data-s-msg]"); if (!a) return;
     e.preventDefault();
+    if (a.getAttribute("aria-disabled") === "true") { const hh = document.querySelector("[data-s-hint]"); if (hh) { hh.hidden = false; hh.classList.add("is-nudge"); setTimeout(() => hh.classList.remove("is-nudge"), 600); } return; }
     const kind = a.dataset.sMsg;
     if (kind === "whatsapp") {
       const n = body.dataset.wa; const url = (isSlot(n) ? "https://wa.me/" : "https://wa.me/" + digits(n)) + "?text=" + encodeURIComponent(message);
@@ -87,9 +88,17 @@
       if (firstFree) timesBox.insertAdjacentHTML("beforeend", `<p class="s-demo">На сегодня окна закончились – выберите другой день.</p>`);
     };
     const update = () => {
-      const s = booking.querySelector("input[name=svc]:checked"), d = daysBox.querySelector("input:checked"), t = timesBox.querySelector("input:checked");
-      const price = s && s.dataset.price ? " (" + (s.dataset.from ? "от " : "") + rub(+s.dataset.price) + ")" : "";
-      setMessage(booking.dataset.message.replace("{услуга}", s ? s.dataset.name + price : "").replace("{день}", d ? d.dataset.full : "").replace("{время}", t ? t.value : "время уточню"));
+      const svcs = [...booking.querySelectorAll("input[name=svc]:checked")].map((i) => i.dataset.name);
+      const d = daysBox.querySelector("input:checked"), t = timesBox.querySelector("input:checked");
+      const setSum = (k, v) => { const el = booking.querySelector("[data-sum-" + k + "]"); if (el) el.textContent = v; };
+      setSum("svc", svcs.length ? svcs.join(", ") : "не выбраны");
+      setSum("day", d ? d.dataset.full : "не выбран");
+      setSum("time", t ? t.value : "не выбрано");
+      const ok = svcs.length > 0;
+      booking.querySelectorAll(".s-send [data-s-msg]").forEach((b) => b.setAttribute("aria-disabled", ok ? "false" : "true"));
+      const hint = booking.querySelector("[data-s-hint]"); if (hint) hint.hidden = ok;
+      if (ok) setMessage(booking.dataset.message.replace("{услуга}", svcs.join(", ")).replace("{день}", d ? d.dataset.full : "").replace("{время}", t ? t.value : "время уточню"));
+      else { setMessage("Здравствуйте! Пишу с сайта «" + brand.trim() + "»."); if (bubble) bubble.textContent = "Выберите хотя бы одну услугу – здесь появится текст заявки."; }
     };
     daysBox.addEventListener("change", () => { drawTimes(); update(); });
     booking.addEventListener("change", update);
